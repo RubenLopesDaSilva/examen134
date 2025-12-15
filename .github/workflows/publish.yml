@@ -20,5 +20,6 @@ jobs:
         port: ${{ secrets.PORT }}
         protocol: ${{ secrets.PROTOCOL }}
         server-dir: ich-0324.cidisi.ch/examen134/
+        exclude: .git*/**
         
           

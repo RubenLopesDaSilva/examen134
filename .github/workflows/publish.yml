@@ -14,14 +14,11 @@ jobs:
     - name: Deployement
       uses: SamKirkland/FTP-Deploy-Action@v4.3.6
       with:
-    # ftp server
         server: ${{ secrets.HOSTNAME }}
-    # ftp username
         username: ${{ secrets.USER_NAME }}
-    # ftp password
         password: ${{ secrets.PASSWORD }}
-    # Server port to connect to (read your web hosts docs)
         port: ${{ secrets.PORT }}
-    # protocol to deploy with - ftp, ftps, or ftps-legacy
         protocol: ${{ secrets.PROTOCOL }}
+        server-dir: examen134/
+        
           

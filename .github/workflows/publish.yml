@@ -1,0 +1,27 @@
+name: publish
+
+on: push
+
+jobs:
+  publish:
+    name: FTP Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v4
+  # You may pin to the exact commit or the version.
+  # uses: SamKirkland/FTP-Deploy-Action@a51268f67f6605236975928ae28b0f7e9971d50a
+    - name: Deployement
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+      with:
+    # ftp server
+        server: ${{ secrets.HOSTNAME }}
+    # ftp username
+        username: ${{ secrets.USER_NAME }}
+    # ftp password
+        password: ${{ secrets.PASSWORD }}
+    # Server port to connect to (read your web hosts docs)
+        port: ${{ secrets.PORT }}
+    # protocol to deploy with - ftp, ftps, or ftps-legacy
+        protocol: ${{ secrets.PROTOCOL }}
+          

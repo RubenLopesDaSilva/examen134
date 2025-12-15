@@ -19,6 +19,6 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         protocol: ${{ secrets.PROTOCOL }}
-        server-dir: examen134/
+        server-dir: ich-0324.cidisi.ch/examen134/
         
           
